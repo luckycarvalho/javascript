@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 02</title>
+    <style>
+        body {
+            background-color: rgb(37, 37, 37);
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        button {
+            background-color: palevioletred;
+            padding: 20px;
+            font-size: 20px;
+            position: relative;
+            top: 40vh;
+            left: 40vw;
+            border-radius: 8px;
+            border: none;
+        }
+        button:hover {
+            background-color: white;
+            cursor: pointer;
+            transition-duration: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="clicou()">Clique em mim!</button> <!--onclick significa: "ao clicar"-->
+    <script>
+        function clicou() {
+            window.alert('Você clicou no botão!')
+        }
+    </script>
+</body>
+</html>

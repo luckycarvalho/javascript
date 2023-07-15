@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 08</title>
+    <style>
+        body {
+            font-family:Arial, Helvetica, sans-serif ;
+        }
+        button {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px;
+        }
+    </style>
+    <script>
+        function calculos() {
+            let numero = Number(window.prompt('Digite um número:'))
+            let res  = document.getElementById('print')
+            res.innerHTML = `<p>Você escolheu o número ${numero}</p><hr><p>O módulo de  ${numero} é  ${Math.abs(numero)}</p><p>A raiz quadrada de  ${numero} é  ${Math.sqrt(numero)}</p><p>A raiz cúbica de ${numero} é ${Math.cbrt(numero)}</p><p>O arredondamento de ${numero} fica ${Math.round(numero)} `
+        }
+    </script>
+</head>
+<body>
+    <h1>Vários cálculos</h1>
+    <button onclick="calculos()">Iniciar</button>
+    <section id="print"></section>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        button {
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Modificando conteúdo</h1>
+    <button onclick="inicio()">Clique para iniciar</button>
+    <section id="resultado">
+        <p>O resultado irá aparecer aqui...</p>
+    </section>
+    <script>
+        function inicio() {
+            let nome = window.prompt('Qual seu nome?')
+            let res = window.document.getElementById('resultado')
+            res.innerHTML += `<p>Olá, <strong>${nome}</strong>! É um prazer em te conhecer! Como vai?</p>`  
+        }
+    </script>
+</body>
+</html>

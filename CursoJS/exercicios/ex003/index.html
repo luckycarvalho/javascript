@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 03</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        button {
+            font-family: monospace;
+            background-color: black;
+            color: white;
+            border: 1px dashed white;
+            padding: 10px;
+        }
+
+        button:hover {
+            background-color: white;
+            border: 1px dashed black;
+            color: black;
+            transition-duration: 0.5s;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="inicio()">Clique para iniciar!</button>
+    <script>
+        function inicio() {
+            let nome = window.prompt('Qual é seu nome?')
+            window.alert(`Bom dia, ${nome}! Como vai?`)
+        }
+    </script>
+</body>
+</html>

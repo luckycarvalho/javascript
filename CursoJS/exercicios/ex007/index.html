@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 07</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculando média do aluno</h1>
+    <button onclick="media()">Iniciar</button>
+    <section id="resultado"></section>
+    <script>
+        function media() {
+            let nome = window.prompt('Qual o nome do aluno?')
+            let n1 = Number(window.prompt(`Qual foi a primeira nota de ${nome}?`))
+            let n2 = Number(window.prompt(`Além de ${n1}, qual foi a outra nota?`))
+            let resposta = window.document.getElementById('resultado')
+            resposta.innerHTML = `<p>Aluno: ${nome}<br>Nota 1: ${n1}<br>Nota 2: ${n2}<br>Média: <strong>${(n1 + n2) / 2}</strong></p>`
+        }
+    </script>
+</body>
+</html>

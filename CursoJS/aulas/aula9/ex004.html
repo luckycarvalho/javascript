@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            background-color: rgba(0, 0, 0, 0.89);
+            font-family: monospace;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Entendendo o DOM</h1>
+    <p>Mexendo na árvore DOM</p>
+    <div></div>
+    <script>
+        let p1 = window.document.getElementsByTagName('h1')
+        window.document.write('Selecionando por tag:' + p1.innertHTML)
+        
+    </script>
+</body>
+</html>
