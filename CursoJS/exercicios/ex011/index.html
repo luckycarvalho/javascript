@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média do aluno</title>
+    <style>
+        body {
+            background-color: rgb(235, 234, 234);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+
+        input {
+            width: 100px;
+            padding: 8px;
+            text-align: center;
+            border-radius: 10px;
+            border: 1px solid gray;
+        }
+
+        input#inome {
+            width: 300px;
+            text-align: left;
+        }
+
+        input#ibotao {
+            cursor: pointer;
+        }
+
+        input#ibotao:hover {
+            background-color: rgb(201, 199, 199);
+            transform: translate(-3px,-3px);
+            box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.144);
+        }
+    </style>
+</head>
+<body>
+        <h1>Calculando a média do aluno</h1>
+        <form autocomplete="on">
+            <p>
+                <label for="inome">Nome:</label>
+                <input type="text" name="nome" id="inome" placeholder="Nome do aluno" autocomplete="name" required>
+            </p>
+            <p>
+                <label for="inota1">Nota 1:</label>
+                <input type="number" name="nota1" id="inota1" placeholder="Primeira nota" required>
+            </p>
+            <p>
+                <label for="inota2">Nota 2:</label>
+                <input type="number" name="nota2" id="inota2" placeholder="Segunda nota" required>
+            </p>
+            <p>
+                <label for="inota3">Nota 3:</label>
+                <input type="number" name="nota3" id="inota3" placeholder="Terceira nota">
+            </p>
+            <input type="button" value="Calcular" id="ibotao">
+            <section id="res"></section>
+            <script>
+                const inputs = document.getElementsByTagName("input"); 
+                for (let i = 0; i < inputs.length; i++) {
+                    inputs[i].addEventListener("input", calcular);
+                }
+                document.getElementById("ibotao").addEventListener("click", calcular); 
+                function calcular() {
+                    let res = document.getElementById("res");
+                    let nome = document.getElementById("inome").value
+                    let nota1 = Number(document.getElementById("inota1").value)
+                    let nota2 = Number(document.getElementById("inota2").value)
+                    let nota3 = Number(document.getElementById("inota3").value)
+                    let media = (nota1 + nota2 + nota3) / 3
+                    if (nota1 == '' || nota2 == '') {
+                        res.innerHTML = `<p>Por favor, digite no mínimo duas notas!</p>`
+                    } else if (nota3 == '') {
+                        media =  (nota1 + nota2) / 2
+                        res.innerHTML = `<p>A média do aluno ${nome} é ${media.toFixed(2)}</p>`
+                    } else {
+                        res.innerHTML = `<p>A média do aluno ${nome} é ${media.toFixed(2)}</p>`
+                    }
+                } 
+            </script>
+</body>
+</html>

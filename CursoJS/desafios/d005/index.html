@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 05</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button{ 
+            font-size: 1em;
+            padding: 20px;
+
+        }
+
+        div > p{
+            line-height: 1.7em;
+        }
+    </style>
+    <script>
+        function conversor(){
+            let valor = Number(prompt('Digite uma medida em metros(m)'))
+            let mm = valor * 1000
+            let cm = valor * 100
+            let dm = valor * 10 
+            let dam = valor / 10
+            let hm = valor / 100
+            let km = valor / 1000
+            let res = document.getElementById('resultado')
+            res.innerHTML = `
+                <p>
+                    A medida de ${valor}m corresponde a: <br>
+                    <strong>${mm.toFixed(2)}</strong> milímetros (mm) <br>
+                    <strong>${cm.toFixed(2)}</strong> centímetros (cm) <br>
+                    <strong>${dm.toFixed(2)}</strong> decímetros (dm) <br>
+                    <strong>${dam.toFixed(2)}</strong> decâmetros (Dam) <br>
+                    <strong>${hm.toFixed(2)}</strong> hectômetreos (Hm) <br>
+                    <strong>${km.toFixed(2)}</strong> quilômetros (Km)
+                </p>`
+        }
+    </script>
+</head>
+<body>
+    <h1>Conversor de medidas</h1>
+    <button id="botao" onclick="conversor()">Converter</button>
+    <p>Clique no botão acima para iniciar</p>
+    <div id="resultado"></div>
+</body>
+</html>

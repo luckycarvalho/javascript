@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 06</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+    </style>
+    <script>
+        function converter() {
+            let temp = document.getElementById('temp');
+            let tc = Number(temp.value)
+            let tf = (tc * 9/5) + 32
+            let kelvin = tc + 273
+            let res = document.getElementById('res');
+            res.innerHTML = `<p>A temperatura ${tc}°C corresponde a <strong>${tf.toFixed(2)}°F</strong> (Fahrenheit) e <strong>${kelvin.toFixed(2)}K</strong> (Kelvin)</p>`
+        }
+    </script>
+</head>
+<body>
+    <h1>Conversor de Temperaturas</h1>
+        <label for="temp">Digite a temperatura em graus Celsius (c°):</label>
+        <input type="number" id="temp" name="temp">
+        <input type="submit" value="converter" onclick="converter()">
+    <div id="res"></div>
+</body>
+</html>

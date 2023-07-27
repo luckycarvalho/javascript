@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 04</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        button {
+            font-size: 1em;
+            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function comprar() {
+            let produto = prompt('Qual produto você está comprando?').toLowerCase();
+            let preco = Number(prompt(`Qual o preço do ${produto}?`));
+            let valor = Number(prompt(`Qual foi o valor que você deu para pagar o ${produto}?`));
+            let troco = valor - preco
+            alert(`Você comprou um ${produto} de R$${preco.toFixed(2)}. Você deu R$${valor.toFixed(2)} para pagar. Seu troco será de R$${troco.toFixed(2)}. Obrigado!`);
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculando o Troco</h1>
+    <button id="botao" onclick="comprar()">Comprar produto</button>
+</body>
+</html>

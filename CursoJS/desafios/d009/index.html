@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 09</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button {
+            font-size: 1em;
+            padding: 15px;
+        }
+    </style>
+    <script>
+        function reajustar() {
+            let nome = prompt('Qual o nome do funcionário?');
+            let salario = Number(prompt(`Qual é o salario de ${nome}?`));
+            let porcentagem = Number(prompt('Digite a porcentagem do aumento?'));
+            let reajuste = salario * (porcentagem / 100);
+            let novoSalario = salario + reajuste;
+            document.getElementById('res').innerHTML = `<h1>${nome} recebeu um aumento!!</h1> <p>O salário atual é R$ ${salario}.</p> <p>Com o aumento de ${porcentagem}%, o salário vai aumentar em R$ ${reajuste.toFixed(2)}.</p> <p>O novo salário de ${nome} será de R$ ${novoSalario.toFixed(2)}</p>`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Reajuste salarial</h1>
+    <button onclick="reajustar()">Reajustar</button>
+    <section id="res"><p>Clique no botão para iniciar</p></section>
+</body>
+</html>

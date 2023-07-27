@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 08</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button {
+            padding: 10px;
+        }
+    </style>
+    <script>
+        let cotacao = 4.80
+        function mudar() {
+            let cot = Number(prompt('Qual a cotação atual do dolár?'));
+            cotacao = cot;
+            document.getElementById('cotacao').innerHTML = cot.toFixed(2);
+        }
+
+        function converter() {
+            let real = Number(document.getElementById('valor').value);
+            let dolar = real / cotacao;
+            document.getElementById('res').innerHTML = `<p>Você tem <strong>US$${dolar.toFixed(2)}</strong></p>`
+        }
+    </script>
+</head>
+<body>
+    <h1>Conversor R$ --- US$</h1>
+    <p>Cotação atual do dolár: R$<span id="cotacao">4.80</span> <br> O valor está errado? Clique <a href="#" onclick="mudar()">aqui</a> para mudar.</p>
+    <p>Digite quanto tem na carteira: R$<input type="number" name="valor" id="valor"></p>
+    <div id="res"></div>
+    <button onclick="converter()">Converter</button>
+
+</body>
+</html>
